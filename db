@@ -1,0 +1,936 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 13-08-2025 a las 21:45:58
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `vadieg-myq`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `detalle_partes_diarios`
+--
+
+CREATE TABLE `detalle_partes_diarios` (
+  `id` int(11) NOT NULL,
+  `parte_id` int(11) NOT NULL,
+  `hora` time NOT NULL,
+  `horometro_km` bigint(11) DEFAULT NULL,
+  `tarea_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `detalle_partes_diarios`
+--
+
+INSERT INTO `detalle_partes_diarios` (`id`, `parte_id`, `hora`, `horometro_km`, `tarea_id`) VALUES
+(172, 46, '08:00:00', 4395, 10),
+(173, 46, '09:00:00', 4429, 14),
+(174, 46, '10:00:00', 4531, 15),
+(175, 46, '11:00:00', 4593, 16),
+(176, 46, '12:00:00', 4631, 19),
+(177, 46, '13:00:00', 4680, 15),
+(178, 47, '08:00:00', 2813, 10),
+(179, 47, '09:00:00', 2849, 15),
+(180, 47, '10:00:00', 2953, 15),
+(181, 47, '11:00:00', 2987, 19),
+(182, 48, '08:00:00', 1899, 9),
+(183, 48, '09:00:00', 1945, 9),
+(184, 48, '10:00:00', 2019, 14),
+(185, 49, '08:00:00', 4280, 17),
+(186, 49, '09:00:00', 4329, 16),
+(187, 49, '10:00:00', 4354, 17),
+(188, 49, '11:00:00', 4373, 7),
+(189, 49, '12:00:00', 4492, 13),
+(190, 50, '08:00:00', 3108, 10),
+(191, 50, '09:00:00', 3173, 14),
+(192, 50, '10:00:00', 3208, 8),
+(193, 50, '11:00:00', 3237, 13),
+(194, 50, '12:00:00', 3376, 17),
+(195, 51, '08:00:00', 5470, 12),
+(196, 51, '09:00:00', 5517, 12),
+(197, 51, '10:00:00', 5552, 9),
+(198, 51, '11:00:00', 5584, 16),
+(199, 51, '12:00:00', 5670, 19),
+(200, 51, '13:00:00', 5715, 13),
+(201, 52, '08:00:00', 2116, 14),
+(202, 52, '09:00:00', 2151, 11),
+(203, 52, '10:00:00', 2254, 18),
+(204, 52, '11:00:00', 2209, 10),
+(205, 52, '12:00:00', 2380, 15),
+(206, 53, '08:00:00', 5114, 8),
+(207, 53, '09:00:00', 5175, 9),
+(208, 53, '10:00:00', 5190, 19),
+(209, 54, '08:00:00', 4257, 10),
+(210, 54, '09:00:00', 4289, 9),
+(211, 54, '10:00:00', 4355, 14),
+(212, 54, '11:00:00', 4410, 8),
+(213, 55, '08:00:00', 4871, 11),
+(214, 55, '09:00:00', 4938, 12),
+(215, 55, '10:00:00', 4967, 8),
+(216, 55, '11:00:00', 5009, 18),
+(217, 55, '12:00:00', 5115, 13),
+(218, 56, '08:00:00', 4229, 11),
+(219, 56, '09:00:00', 4278, 10),
+(220, 56, '10:00:00', 4335, 9),
+(221, 56, '11:00:00', 4379, 19),
+(222, 56, '12:00:00', 4449, 7),
+(223, 56, '13:00:00', 4484, 19),
+(224, 57, '08:00:00', 3056, 11),
+(225, 57, '09:00:00', 3106, 9),
+(226, 57, '10:00:00', 3156, 8),
+(227, 58, '08:00:00', 3765, 17),
+(228, 58, '09:00:00', 3818, 19),
+(229, 58, '10:00:00', 3867, 18),
+(230, 58, '11:00:00', 3897, 9),
+(231, 59, '08:00:00', 1960, 12),
+(232, 59, '09:00:00', 1996, 10),
+(233, 59, '10:00:00', 2058, 7),
+(234, 60, '08:00:00', 1272, 11),
+(235, 60, '09:00:00', 1320, 8),
+(236, 60, '10:00:00', 1368, 11),
+(237, 60, '11:00:00', 1458, 10),
+(238, 60, '12:00:00', 1536, 12),
+(239, 60, '13:00:00', 1592, 13),
+(240, 61, '08:00:00', 1121, 12),
+(241, 61, '09:00:00', 1155, 7),
+(242, 61, '10:00:00', 1235, 15),
+(243, 61, '11:00:00', 1253, 13),
+(244, 61, '12:00:00', 1297, 10),
+(245, 61, '13:00:00', 1466, 16),
+(246, 62, '08:00:00', 2030, 10),
+(247, 62, '09:00:00', 2100, 16),
+(248, 62, '10:00:00', 2164, 11),
+(249, 62, '11:00:00', 2135, 13),
+(250, 63, '08:00:00', 4780, 11),
+(251, 63, '09:00:00', 4825, 8),
+(252, 63, '10:00:00', 4862, 10),
+(253, 64, '08:00:00', 3361, 12),
+(254, 64, '09:00:00', 3410, 7),
+(255, 64, '10:00:00', 3501, 9),
+(256, 65, '08:00:00', 5379, 16),
+(257, 65, '09:00:00', 5422, 16),
+(258, 65, '10:00:00', 5499, 17),
+(259, 65, '11:00:00', 5472, 13),
+(260, 65, '12:00:00', 5587, 9),
+(261, 66, '08:00:00', 4434, 18),
+(262, 66, '09:00:00', 4464, 8),
+(263, 66, '10:00:00', 4564, 11),
+(264, 66, '11:00:00', 4587, 16),
+(265, 66, '12:00:00', 4706, 17),
+(266, 67, '08:00:00', 6068, 10),
+(267, 67, '09:00:00', 6126, 7),
+(268, 67, '10:00:00', 6160, 13),
+(269, 67, '11:00:00', 6161, 9),
+(270, 68, '08:00:00', 3232, 12),
+(271, 68, '09:00:00', 3295, 7),
+(272, 68, '10:00:00', 3370, 12),
+(273, 69, '08:00:00', 4463, 11),
+(274, 69, '09:00:00', 4509, 13),
+(275, 69, '10:00:00', 4599, 8),
+(276, 70, '08:00:00', 2382, 15),
+(277, 70, '09:00:00', 2413, 15),
+(278, 70, '10:00:00', 2472, 10),
+(279, 70, '11:00:00', 2502, 13),
+(280, 70, '12:00:00', 2502, 16),
+(281, 70, '13:00:00', 2617, 9),
+(282, 71, '08:00:00', 1330, 17),
+(283, 71, '09:00:00', 1381, 8),
+(284, 71, '10:00:00', 1414, 8),
+(285, 72, '08:00:00', 1107, 19),
+(286, 72, '09:00:00', 1144, 13),
+(287, 72, '10:00:00', 1207, 11),
+(288, 72, '11:00:00', 1200, 10),
+(289, 72, '12:00:00', 1255, 18),
+(290, 72, '13:00:00', 1307, 15),
+(291, 73, '08:00:00', 5682, 9),
+(292, 73, '09:00:00', 5743, 14),
+(293, 73, '10:00:00', 5786, 11),
+(294, 73, '11:00:00', 5772, 19),
+(295, 74, '08:00:00', 4171, 12),
+(296, 74, '09:00:00', 4229, 18),
+(297, 74, '10:00:00', 4249, 19),
+(298, 74, '11:00:00', 4378, 17),
+(299, 74, '12:00:00', 4431, 7),
+(300, 74, '13:00:00', 4481, 19),
+(301, 75, '08:00:00', 3616, 18),
+(302, 75, '09:00:00', 3648, 19),
+(303, 75, '10:00:00', 3680, 7),
+(304, 75, '11:00:00', 3739, 11),
+(305, 76, '08:00:00', 4128, 17),
+(306, 76, '09:00:00', 4179, 13),
+(307, 76, '10:00:00', 4264, 8),
+(308, 77, '14:59:05', 5100, 8),
+(309, 78, '15:41:39', 5100, 9),
+(310, 78, '15:41:49', 5200, 13),
+(311, 78, '15:42:04', 5300, 18),
+(312, 79, '15:43:37', 5100, 19),
+(313, 79, '15:43:43', 5200, 11),
+(314, 79, '15:43:50', 5300, 10),
+(315, 80, '16:36:31', 5100, 13),
+(316, 80, '16:36:38', 5300, 9),
+(317, 80, '16:36:45', 5400, 7),
+(318, 81, '16:39:43', 5100, 9),
+(319, 81, '16:39:50', 5200, 19),
+(320, 81, '16:39:59', 5300, 18),
+(321, 82, '00:40:55', 5100, 19),
+(322, 83, '08:56:42', 5100, 17),
+(323, 83, '08:56:56', 5200, 18),
+(324, 83, '08:57:05', 5300, 13),
+(325, 84, '13:21:28', 6, 8),
+(326, 85, '09:29:46', 500002, 9);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `equipos`
+--
+
+CREATE TABLE `equipos` (
+  `id` int(11) NOT NULL,
+  `nombre_equipo` varchar(255) NOT NULL,
+  `tipo` varchar(100) DEFAULT NULL,
+  `descripcion` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `equipos`
+--
+
+INSERT INTO `equipos` (`id`, `nombre_equipo`, `tipo`, `descripcion`) VALUES
+(153, 'AC-01', 'SEMIRREMOLQUE', 'SEMIRREMOLQUE CARRETON VIAL 25 TN'),
+(154, 'AC-02', 'SEMIRREMOLQUE', 'SEMIRREMOLQUE BATEA DE VUELCO TRASERO 3 EJES 25 M3'),
+(155, 'AC-03', 'SEMIRREMOLQUE', 'SEMIRREMOLQUE BATEA DE VUELCO TRASERO 3 EJES 25 M3'),
+(156, 'AC-04', 'SEMIRREMOLQUE', 'SEMIRREMOLQUE CARRETON VIAL 25 TN'),
+(157, 'AC-05', 'SEMIRREMOLQUE', 'SEMIRREMOLQUE BARANDA VOLCABLE 3 EJES 25,5 TN'),
+(158, 'AC-06', 'SEMIRREMOLQUE', 'SEMIRREMOLQUE ACOPLADO MOVIL 10 TN'),
+(159, 'AC-07', 'SEMIRREMOLQUE', 'SEMIRREMOLQUE CARRETON VIAL 25 TN'),
+(160, 'AE-01', 'AUTOELEVADOR', 'AUTOELEVADOR DIESEL HIDRAULICO 5 TN'),
+(161, 'AE-02', 'AUTOELEVADOR', 'AUTOELEVADOR ELECTRICO 2,5 TN'),
+(162, 'CA-01', 'CAMION CHASIS 6X4', 'CAMION CHASIS 6X4 VOLCADOR 14 M3'),
+(163, 'CA-02', 'CAMION CHASIS 4X2', 'CAMION CHASIS 4X2 REGADOR DE AGUA 8.000 LTS'),
+(164, 'CA-04', 'CAMION TRACTOR 4X2 (+1)', 'CAMION TRACTOR 4X2 (+1) C/EQUIPO HIDRAULICO E HIDROGRUA 25 TNM 440 CV'),
+(165, 'CA-05', 'CAMION CHASIS 4X2', 'CAMION CHASIS 4X2 REGADOR DE AGUA 8.000 LTS'),
+(166, 'CA-06', 'CAMION CHASIS 6X2', 'CAMION CHASIS 6X2 HIDRGRUA 14,6 TNM 270 HP'),
+(167, 'CA-07', 'CAMION CHASIS 8X4', 'CAMION CHASIS 8X4 VOLCADOR 14 M3'),
+(168, 'CA-08', 'CAMION TRACTOR 4X2 (+1)', 'CAMION TRACTOR 4X2 (+1) C/EQUIPO HIDRAULICO 380 CV'),
+(169, 'CA-09', 'CAMION CHASIS 4X2', 'CAMION CHASIS 4X2 REGADOR DE AGUA 8.000 LTS'),
+(170, 'CA-10', 'CAMION TRACTOR 4X2', 'CAMION TRACTOR 4X2 C/EQUIPO HIDRAULICO 276 HP'),
+(171, 'CA-11', 'CAMION CHASIS 4X2', 'CAMION CHASIS 4X2 VOLCADOR 16 M3'),
+(172, 'CA-12', 'CAMION CHASIS 6X4', 'CAMION CHASIS 6X4 VOLCADOR 19 M3'),
+(173, 'CA-13', 'CAMION CHASIS 6X4', 'CAMION CHASIS 6X4 VOLCADOR 19 M3'),
+(174, 'CA-15', 'CAMION CHASIS 4X2', 'CAMION CHASIS 4X2 CAMILLA HIDRAULICA 6,5 M3'),
+(175, 'CA-16', 'CAMION CHASIS 4X2', 'CAMION CHASIS 4X2 CAJA CON BARANDAS 7,5 TN'),
+(176, 'CA-17', 'CAMION CHASIS 6X4', 'CAMION CHASIS 6X4 VOLCADOR 16 M3'),
+(177, 'CA-18', 'CAMION CHASIS 6X4', 'CAMION CHASIS 6X4 VOLCADOR 16 M3'),
+(178, 'CA-19', 'CAMION TRACTOR 4X2 (+1)', 'CAMION TRACTOR 4X2 (+1) C/EQUIPO HIDRAULICO 450 CV'),
+(179, 'CF-01', 'CARGADORA FRONTAL', 'CARGADORA FRONTAL DE RUEDAS ARTICULADO 2,1 M3'),
+(180, 'CF-02', 'CARGADORA FRONTAL', 'CARGADORA FRONTAL DE RUEDAS ARTICULADO 2,1 M3'),
+(181, 'CF-03', 'CARGADORA FRONTAL', 'CARGADORA FRONTAL DE RUEDAS ARTICULADO 3,2 M3'),
+(182, 'CON-01', 'CONTENEDOR', 'CONTENEDOR 6M SANITARIO - COCINA 15 M2'),
+(183, 'CON-02', 'CONTENEDOR', 'CONTENEDOR 6M DORMITORIO 15 M2'),
+(184, 'CON-03', 'CONTENEDOR', 'CONTENEDOR 6M DORMITORIO 15 M2'),
+(185, 'CON-04', 'CONTENEDOR', 'CONTENEDOR 6M OFICINA 15 M2'),
+(186, 'CON-05', 'CONTENEDOR', 'CONTENEDOR 6M DEPOSITO 33 M3'),
+(187, 'CON-06', 'CONTENEDOR', 'CONTENEDOR 12M OFICINA 30 M2'),
+(188, 'CON-07', 'CONTENEDOR', 'CONTENEDOR 12M COCINA 68 M3'),
+(189, 'CON-08', 'CONTENEDOR', 'CONTENEDOR 6M OFICINA 15 M2'),
+(190, 'CON-09', 'CONTENEDOR', 'CONTENEDOR 12M OFICINA 30 M2'),
+(191, 'CON-10', 'CONTENEDOR', 'CONTENEDOR 12M OFICINA 30 M2'),
+(192, 'CON-11', 'CONTENEDOR', 'CONTENEDOR 6M OFICINA 15 M2'),
+(193, 'CON-12', 'CONTENEDOR', 'CONTENEDOR 6M OFICINA 15 M2'),
+(194, 'CON-13', 'CONTENEDOR', 'CONTENEDOR 4M COCINA 8 M2'),
+(195, 'CON-14', 'CONTENEDOR', 'CONTENEDOR 6M OFICINA 15 M2'),
+(196, 'CON-15', 'CONTENEDOR', 'CONTENEDOR 6M OFICINA 15 M2'),
+(197, 'CON-16', 'CONTENEDOR', 'CONTENEDOR 6M SANITARIO 15 M2'),
+(198, 'CON-17', 'CONTENEDOR', 'CONTENEDOR 2M GUARDIA 4 M2'),
+(199, 'CON-18', 'CONTENEDOR', 'CONTENEDOR 12M COMEDOR - PAÑOL 68 M3'),
+(200, 'CON-19', 'CONTENEDOR', 'CONTENEDOR 6M OFICINA 15 M2'),
+(201, 'CON-20', 'CONTENEDOR', 'CONTENEDOR 6M OFICINA 15 M2'),
+(202, 'CON-21', 'CONTENEDOR', 'CONTENEDOR 6M OFICINA 15 M2'),
+(203, 'CON-22', 'CONTENEDOR', 'CONTENEDOR 12M DEPOSITO 68 M3'),
+(204, 'CON-23', 'CONTENEDOR', 'CONTENEDOR 6M DORMITORIO 15 M2'),
+(205, 'CON-24', 'CONTENEDOR', 'CONTENEDOR 6M DEPOSITO 33 M3'),
+(206, 'CON-25', 'CONTENEDOR', 'CONTENEDOR 4M BAÑO 8 M2'),
+(207, 'CON-26', 'CONTENEDOR', 'CONTENEDOR 6M DEPOSITO 33 M3'),
+(208, 'CON-27', 'CONTENEDOR', 'CONTENEDOR 6M COMEDOR 15 M2'),
+(209, 'CON-28', 'CONTENEDOR', 'CONTENEDOR 12M OFICINA 30 M2'),
+(210, 'CON-29', 'CONTENEDOR', 'CONTENEDOR 6M OFICINA 15 M2'),
+(211, 'CON-30', 'CONTENEDOR', 'CONTENEDOR 6M DEPOSITO 33 M3'),
+(212, 'CON-31', 'CONTENEDOR', 'CONTENEDOR 12M OFICINA 30 M2'),
+(213, 'CR-01', 'CASILLA MOVIL', 'CASILLA MOVIL 2 EJES DORMITORIO 10 M2'),
+(214, 'CR-02', 'CASILLA MOVIL', 'CASILLA MOVIL 2 EJES DORMITORIO 10 M2'),
+(215, 'CR-03', 'CASILLA MOVIL', 'CASILLA MOVIL 2 EJES DORMITORIO 10 M2'),
+(216, 'ECO-01', 'ESTACION DE COMBUSTIBLE', 'ESTACION DE COMBUSTIBLE CON SURTIDOR 10.000 L'),
+(217, 'ECO-02', 'ESTACION DE COMBUSTIBLE', 'ESTACION DE COMBUSTIBLE CON SURTIDOR 20.000 L'),
+(218, 'EX-04', 'EXCAVADORA', 'EXCAVADORA SOBRE ORUGAS 20 TN'),
+(219, 'EX-05', 'EXCAVADORA', 'EXCAVADORA SOBRE ORUGAS 20 TN'),
+(220, 'EX-06', 'EXCAVADORA', 'EXCAVADORA SOBRE ORUGAS 20 TN'),
+(221, 'EX-07', 'EXCAVADORA', 'EXCAVADORA SOBRE ORUGAS 3 VIA 20 TN'),
+(222, 'EX-08', 'EXCAVADORA', 'EXCAVADORA SOBRE ORUGAS 3 VIA 22 TN'),
+(223, 'EX-09', 'EXCAVADORA', 'EXCAVADORA ANFIBIA SOBRE ORUGAS 22 TN'),
+(224, 'EX-10', 'EXCAVADORA', 'EXCAVADORA SOBRE ORUGAS 12 TN'),
+(225, 'EX-11', 'EXCAVADORA', 'EXCAVADORA SOBRE ORUGAS 22 TN'),
+(226, 'EX-12', 'EXCAVADORA', 'EXCAVADORA SOBRE ORUGAS 22 TN'),
+(227, 'EX-14', 'EXCAVADORA', 'EXCAVADORA SOBRE ORUGAS 22 TN'),
+(228, 'EX-15', 'EXCAVADORA', 'EXCAVADORA SOBRE ORUGAS 22 TN'),
+(229, 'EX-16', 'EXCAVADORA', 'EXCAVADORA SOBRE ORUGAS 22 TN'),
+(230, 'GE-01', 'GRUPO ELECTRGENO', 'GRUPO ELECTRGENO TRIFASICO DIESEL 46 KVA'),
+(231, 'HI-01', 'EQUIPO COMPLEMENTARIO', 'EQUIPO COMPLEMENTARIO HIDROGRUA ARTICULADA 14,6 TNM'),
+(232, 'HI-02', 'EQUIPO COMPLEMENTARIO', 'EQUIPO COMPLEMENTARIO HIDROGRUA ARTICULADA 25 TNM'),
+(233, 'M-03', 'CAMIONETA', 'CAMIONETA 4X2 CABINA DOBLE 0,7 TN'),
+(234, 'M-04', 'CAMIONETA', 'CAMIONETA 4X2 CABINA SIMPLE 0,7 TN'),
+(235, 'M-05', 'CAMIONETA', 'CAMIONETA 4X2 CABINA DOBLE 0,7 TN'),
+(236, 'M-06', 'CAMIONETA', 'CAMIONETA 4X2 CABINA SIMPLE 0,7 TN'),
+(237, 'M-09', 'CAMIONETA', 'CAMIONETA 4X2 CABINA DOBLE 1 TN'),
+(238, 'M-11', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(239, 'M-12', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(240, 'M-14', 'CAMIONETA', 'CAMIONETA 4X4 CABINA SIMPLE 1 TN'),
+(241, 'M-15', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(242, 'M-16', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(243, 'M-17', 'CAMIONETA', 'CAMIONETA 4X2 CABINA DOBLE 1 TN'),
+(244, 'M-18', 'CAMIONETA', 'CAMIONETA 4X2 CABINA DOBLE 1 TN'),
+(245, 'M-19', 'CAMIONETA', 'CAMIONETA 4X2 CABINA DOBLE 1 TN'),
+(246, 'M-20', 'CAMIONETA', 'CAMIONETA 4X2 CABINA DOBLE 1 TN'),
+(247, 'M-21', 'SUV', 'SUV 4X2 5 PUERTAS 5 PASAJEROS'),
+(248, 'M-22', 'CAMIONETA', 'CAMIONETA 4X2 CABINA DOBLE 1 TN'),
+(249, 'M-24', 'CAMIONETA', 'CAMIONETA 4X2 CABINA DOBLE 1 TN'),
+(250, 'M-25', 'AUTOMOVIL', 'AUTOMOVIL SEDAN 5 PUERTAS 5 PASAJEROS'),
+(251, 'M-27', 'CAMIONETA', 'CAMIONETA 4X2 CABINA DOBLE 1 TN'),
+(252, 'M-28', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(253, 'M-29', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(254, 'M-30', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(255, 'M-31', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(256, 'M-33', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(257, 'M-35', 'SUV', 'SUV 4X4 5 PUERTAS 7 PASAJEROS'),
+(258, 'M-36', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(259, 'M-37', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(260, 'M-38', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(261, 'M-39', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(262, 'M-41', 'CAMIONETA', 'CAMIONETA 4X4 CABINA SIMPLE 1 TN'),
+(263, 'M-42', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(264, 'M-43', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(265, 'M-44', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(266, 'M-45', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(267, 'M-46', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(268, 'M-47', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(269, 'M-48', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(270, 'M-49', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(271, 'M-50', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(272, 'M-51', 'CAMIONETA', 'CAMIONETA 4X2 CABINA DOBLE 1 TN'),
+(273, 'M-52', 'CAMIONETA', 'CAMIONETA 4X2 CABINA DOBLE 1 TN'),
+(274, 'M-53', 'CAMIONETA', 'CAMIONETA 4X2 CABINA DOBLE 1 TN'),
+(275, 'M-54', 'CAMIONETA', 'CAMIONETA 4X2 CABINA DOBLE 1 TN'),
+(276, 'M-55', 'CAMIONETA', 'CAMIONETA 4X4 CABINA DOBLE 1 TN'),
+(277, 'M-56', 'CAMIONETA', 'CAMIONETA 4X2 CABINA DOBLE 1 TN'),
+(278, 'M-57', 'CAMIONETA', 'CAMIONETA 4X2 CABINA DOBLE 1 TN'),
+(279, 'MC-01', 'MINICARGADOR FRONTAL', 'MINICARGADOR FRONTAL DE RUEDAS DESLIZANTE 0,9 M3'),
+(280, 'MC-02', 'MINICARGADOR FRONTAL', 'MINICARGADOR FRONTAL DE RUEDAS DESLIZANTE 0,9 M3'),
+(281, 'MC-03', 'MINICARGADOR FRONTAL', 'MINICARGADOR FRONTAL DE RUEDAS DESLIZANTE 0,5 M3'),
+(282, 'MC-04', 'MINICARGADOR FRONTAL', 'MINICARGADOR FRONTAL DE RUEDAS DESLIZANTE 0,5 M3'),
+(283, 'MEX-01', 'MINIEXCAVADORA', 'MINIEXCAVADORA SOBRE ORUGAS 0,21 M3'),
+(284, 'MT-01', 'MOTONIVELADORA', 'MOTONIVELADORA ARTICULADA 14 PIES'),
+(285, 'MT-02', 'MOTONIVELADORA', 'MOTONIVELADORA ARTICULADA 14 PIES'),
+(286, 'MT-03', 'MOTONIVELADORA', 'MOTONIVELADORA ARTICULADA 14 PIES'),
+(287, 'MT-04', 'MOTONIVELADORA', 'MOTONIVELADORA ARTICULADA 12 PIES'),
+(288, 'RA-01', 'RASTRA', 'RASTRA TIRO EXENTRICO 14 DISCOS'),
+(289, 'RC-01', 'RODILLO COMPACTADOR DE SUELO', 'RODILLO COMPACTADOR DE SUELO VIBRATORIO LISO 13 TN'),
+(290, 'RC-02', 'RODILLO COMPACTADOR DE SUELO', 'RODILLO COMPACTADOR DE SUELO AUTOPROPULSADO 8 RUEDAS 16 TN'),
+(291, 'RC-03', 'RODILLO COMPACTADOR DE SUELO', 'RODILLO COMPACTADOR DE SUELO VIBRATORIO LISO 14 TN'),
+(292, 'RC-04', 'RODILLO COMPACTADOR DE SUELO', 'RODILLO COMPACTADOR DE SUELO VIBRATORIO LISO 13 TN'),
+(293, 'RC-05', 'RODILLO COMPACTADOR DE SUELO', 'RODILLO COMPACTADOR DE SUELO MINI LISO 0,7 TN'),
+(294, 'RC-06', 'RODILLO COMPACTADOR DE SUELO', 'RODILLO COMPACTADOR DE SUELO MINI LISO 0,5 TN'),
+(295, 'RC-07', 'RODILLO COMPACTADOR DE SUELO', 'RODILLO COMPACTADOR DE SUELO MINI VIBRATORIO PATA DE CABRA 1,5 TN'),
+(296, 'RC-08', 'RODILLO COMPACTADOR DE SUELO', 'RODILLO COMPACTADOR DE SUELO MINI VIBRATORIO PATA DE CABRA 1,5 TN'),
+(297, 'RC-09', 'RODILLO COMPACTADOR DE SUELO', 'RODILLO COMPACTADOR DE SUELO MINI VIBRATORIO PATA DE CABRA 1,5 TN'),
+(298, 'RC-10', 'RODILLO COMPACTADOR DE SUELO', 'RODILLO COMPACTADOR DE SUELO VIBRATORIO LISO 22 TN'),
+(299, 'RC-11', 'RODILLO COMPACTADOR DE SUELO', 'RODILLO COMPACTADOR DE SUELO VIBRATORIO LISO CONVERTIBLE 17 TN'),
+(300, 'RC-12', 'RODILLO COMPACTADOR DE SUELO', 'RODILLO COMPACTADOR DE SUELO VIBRATORIO LISO CONVERTIBLE 17 TN'),
+(301, 'RP-01', 'RETROPALA', 'RETROPALA 4X4 CON TERCERAVIA 8 TN'),
+(302, 'RP-02', 'RETROPALA', 'RETROPALA 4X4 CON TERCERAVIA 8 TN'),
+(303, 'TR-01', 'TRACTOR AGRICOLA', 'TRACTOR AGRICOLA 4X2 63 HP'),
+(304, 'TRA-01', 'TRAILER ACOPLADO', 'TRAILER ACOPLADO CON BARANDAS 2 EJES 3 TN'),
+(305, 'TRA-02', 'TRAILER ACOPLADO', 'TRAILER ACOPLADO BASCULANTE P/TRANSPORTE 2 EJES 4 TN'),
+(306, 'TRA-03', 'TRAILER ACOPLADO', 'TRAILER ACOPLADO CON BARANDAS 2 EJES 3 TN');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `obras`
+--
+
+CREATE TABLE `obras` (
+  `id` int(11) NOT NULL,
+  `cod_obra` varchar(50) NOT NULL,
+  `nombre_obra` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `obras`
+--
+
+INSERT INTO `obras` (`id`, `cod_obra`, `nombre_obra`) VALUES
+(15, 'O00170', 'TUSCAL NUEVA'),
+(16, 'O00171', 'ALTA GRACIA'),
+(17, 'O00175', 'COLECTORES 2B'),
+(18, 'O00176', 'NUEVA SEDE'),
+(19, 'O00177', 'COLECTORES PRIVADOS'),
+(20, 'O00181', 'SAN JAVIER - CONNISA'),
+(21, 'O00182', 'PLANTA TICINO'),
+(22, 'O00183', 'COSQUIN'),
+(23, 'O00184', 'MINA CLAVERO'),
+(24, 'O00185', 'CANAL EL MANATIAL'),
+(25, 'O00187', 'CANAL LASPIUR'),
+(26, 'O00188', 'MADRE SACRAMENTO'),
+(27, 'O00190', 'DESAGUE EMERGENCIA VELEZ SARFIELD'),
+(28, 'O00192', 'ACUEDUCTO QUILINO'),
+(29, 'OM0102', 'COBERTURA ZONA 2 RRH'),
+(30, 'OV0101', 'ROTONDA 11 DE SEPTIEMBRE'),
+(31, 'OV0102', 'TAREAS PARA FINALIZAR EL PUENTE PRIVADO VADO RIO SUQUIA'),
+(32, 'OV0103', 'ROTONDA INTERSECCION RP N°1 Y RO N°17'),
+(33, 'OV0104', 'COBERTURA ZONA VIALIDAD'),
+(34, 'OV0105', 'OBRA PRIVADA BERSANO'),
+(35, 'OR0101', 'VIAL INTERCAMBIADOR RIO IV');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ordenes_servicio`
+--
+
+CREATE TABLE `ordenes_servicio` (
+  `id` int(11) NOT NULL,
+  `obra_id` int(11) NOT NULL,
+  `equipo_id` int(11) NOT NULL,
+  `usuario_id` int(11) NOT NULL,
+  `descripcion` text DEFAULT NULL,
+  `fecha` date DEFAULT curdate(),
+  `hora_inicio` datetime DEFAULT current_timestamp(),
+  `hora_fin` datetime DEFAULT NULL,
+  `requiere_repuestos` tinyint(1) DEFAULT 0,
+  `estado` enum('abierta','pausada','cerrada') DEFAULT 'abierta',
+  `kilometro` int(11) DEFAULT NULL,
+  `horas_uso` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `ordenes_servicio`
+--
+
+INSERT INTO `ordenes_servicio` (`id`, `obra_id`, `equipo_id`, `usuario_id`, `descripcion`, `fecha`, `hora_inicio`, `hora_fin`, `requiere_repuestos`, `estado`, `kilometro`, `horas_uso`) VALUES
+(41, 18, 158, 7, 'SERVICE', '2025-08-08', '2025-08-08 19:37:56', NULL, 1, 'abierta', 54232, 8),
+(42, 16, 161, 7, 'SERVICE', '2025-08-08', '2025-08-08 19:40:47', '2025-08-09 01:13:54', 1, 'cerrada', 458966, 5),
+(43, 16, 161, 7, 'SERVICE', '2025-08-08', '2025-08-08 19:40:47', '2025-08-11 08:39:09', 1, 'cerrada', 458966, 5),
+(44, 16, 156, 1, 'SERVICE', '2025-08-09', '2025-08-09 03:45:30', '2025-08-09 00:54:36', 0, 'cerrada', 500, 8);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `partes_diarios`
+--
+
+CREATE TABLE `partes_diarios` (
+  `id` int(11) NOT NULL,
+  `usuario_id` int(11) NOT NULL,
+  `obra_id` int(11) NOT NULL,
+  `equipo_id` int(11) NOT NULL,
+  `fecha` date NOT NULL DEFAULT curdate(),
+  `horometro_inicio` bigint(11) NOT NULL,
+  `observaciones` text DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `partes_diarios`
+--
+
+INSERT INTO `partes_diarios` (`id`, `usuario_id`, `obra_id`, `equipo_id`, `fecha`, `horometro_inicio`, `observaciones`, `created_at`) VALUES
+(46, 9, 26, 201, '2025-07-01', 4284, 'Generado automáticamente', '2025-08-08 17:40:51'),
+(47, 10, 30, 228, '2025-07-02', 2755, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(48, 9, 23, 257, '2025-07-03', 1804, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(49, 10, 16, 259, '2025-07-04', 4145, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(50, 9, 35, 225, '2025-07-05', 3041, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(51, 10, 26, 199, '2025-07-06', 5420, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(52, 9, 21, 182, '2025-07-07', 1968, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(53, 10, 21, 233, '2025-07-08', 5029, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(54, 9, 18, 271, '2025-07-09', 4176, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(55, 10, 29, 236, '2025-07-10', 4768, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(56, 9, 22, 214, '2025-07-11', 4133, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(57, 10, 27, 158, '2025-07-12', 2980, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(58, 9, 16, 164, '2025-07-13', 3618, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(59, 10, 31, 163, '2025-07-14', 1886, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(60, 9, 30, 195, '2025-07-15', 1209, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(61, 10, 19, 215, '2025-07-16', 1056, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(62, 9, 18, 263, '2025-07-17', 1962, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(63, 10, 23, 203, '2025-07-18', 4653, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(64, 9, 27, 159, '2025-07-19', 3300, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(65, 10, 28, 211, '2025-07-20', 5296, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(66, 9, 28, 167, '2025-07-21', 4307, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(67, 10, 15, 231, '2025-07-22', 5961, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(68, 9, 35, 227, '2025-07-23', 3124, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(69, 10, 21, 214, '2025-07-24', 4344, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(70, 9, 21, 216, '2025-07-25', 2285, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(71, 10, 33, 306, '2025-07-26', 1192, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(72, 9, 33, 233, '2025-07-27', 1014, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(73, 10, 33, 247, '2025-07-28', 5623, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(74, 9, 32, 217, '2025-07-29', 4116, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(75, 10, 29, 157, '2025-07-30', 3506, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(76, 9, 33, 182, '2025-07-31', 4066, 'Generado automáticamente', '2025-08-08 17:40:52'),
+(77, 1, 15, 169, '2025-08-08', 5000, '', '2025-08-08 17:59:06'),
+(78, 9, 21, 284, '2025-08-08', 5000, 'S/N', '2025-08-08 18:42:10'),
+(79, 9, 26, 171, '2025-08-08', 50000, 'S/N', '2025-08-08 18:43:51'),
+(80, 9, 23, 226, '2025-08-08', 5000, 'S/N', '2025-08-08 19:36:46'),
+(81, 9, 18, 272, '2025-08-08', 5000, 'S/N', '2025-08-08 19:40:01'),
+(82, 9, 18, 250, '2025-08-09', 5000, 's/n', '2025-08-09 03:40:56'),
+(83, 1, 30, 218, '2025-08-11', 5000, 's/n', '2025-08-11 11:58:17'),
+(84, 9, 17, 171, '2025-08-12', 0, '', '2025-08-12 16:21:34'),
+(85, 1, 19, 234, '2025-08-13', 500000, 'S/N', '2025-08-13 12:41:10');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `repuestos_orden`
+--
+
+CREATE TABLE `repuestos_orden` (
+  `id` int(11) NOT NULL,
+  `orden_id` int(11) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `cantidad` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `repuestos_orden`
+--
+
+INSERT INTO `repuestos_orden` (`id`, `orden_id`, `nombre`, `cantidad`) VALUES
+(8, 41, 'POLI V', 1),
+(9, 41, 'TENSOR MEDIO', 1),
+(10, 41, 'ACEITE ', 1),
+(11, 41, 'CORREA DISTR REF.2568888', 1),
+(12, 42, 'KIT DISTR', 1),
+(13, 42, 'POLIV', 1),
+(14, 42, '', 1),
+(15, 42, 'ACEITE', 1),
+(16, 42, 'BOMBA DE AGUA', 1),
+(17, 43, 'KIT DISTR', 1),
+(18, 43, 'ACEITE', 1),
+(19, 43, 'POLIV', 1),
+(20, 43, 'BOMBA DE AGUA', 1),
+(21, 43, '', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tareas`
+--
+
+CREATE TABLE `tareas` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `tareas`
+--
+
+INSERT INTO `tareas` (`id`, `nombre`) VALUES
+(17, 'ALMUERZO'),
+(9, 'BACHEOS'),
+(8, 'CAPAS GRANULARES'),
+(19, 'COMBUSTIBLE'),
+(13, 'DEMARCACIÓN'),
+(16, 'Falta de Operador'),
+(15, 'Falta de Tarea'),
+(11, 'HORMIGONES'),
+(18, 'MANTENIMIENTO'),
+(12, 'MEZCLA ASFÁLTICA'),
+(14, 'OTRO (ACLARAR):'),
+(10, 'RECICLADOS'),
+(7, 'TERRAPLÉN');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ubicaciones`
+--
+
+CREATE TABLE `ubicaciones` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `entity` varchar(30) NOT NULL,
+  `entity_id` bigint(20) UNSIGNED NOT NULL,
+  `usuario_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `lat` decimal(9,6) NOT NULL,
+  `lng` decimal(9,6) NOT NULL,
+  `precision_m` smallint(5) UNSIGNED DEFAULT NULL,
+  `fuente` enum('gps','manual') DEFAULT 'gps',
+  `captured_at` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `ubicaciones`
+--
+
+INSERT INTO `ubicaciones` (`id`, `entity`, `entity_id`, `usuario_id`, `lat`, `lng`, `precision_m`, `fuente`, `captured_at`) VALUES
+(1, 'parte', 77, 1, -31.478045, -64.187167, 24, 'gps', '2025-08-08 14:59:10'),
+(2, 'parte', 78, 9, -31.470387, -64.189235, 3672, 'gps', '2025-08-08 15:42:10'),
+(3, 'parte', 79, 9, -31.470387, -64.189235, 3672, 'gps', '2025-08-08 15:43:51'),
+(4, 'parte', 80, 9, -31.470387, -64.189235, 3672, 'gps', '2025-08-08 16:36:46'),
+(5, 'parte', 81, 9, -31.470387, -64.189235, 3672, 'gps', '2025-08-08 16:40:01'),
+(6, 'parte', 82, 9, -31.428709, -64.247025, 20, 'gps', '2025-08-09 00:40:59'),
+(7, 'parte', 83, 1, -34.839910, -58.463000, 65535, 'gps', '2025-08-11 08:58:24'),
+(8, 'parte', 84, 9, -34.839910, -58.463000, 65535, 'gps', '2025-08-12 13:21:36'),
+(9, 'parte', 85, 1, -31.476737, -64.167799, 10562, 'gps', '2025-08-13 09:41:14');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `user_logs`
+--
+
+CREATE TABLE `user_logs` (
+  `id` bigint(20) NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `user_id` int(11) DEFAULT NULL,
+  `username` varchar(150) DEFAULT NULL,
+  `event` enum('request','login','logout','failed_login','permission_denied') NOT NULL DEFAULT 'request',
+  `method` varchar(10) DEFAULT NULL,
+  `route` varchar(255) DEFAULT NULL,
+  `status` smallint(6) DEFAULT NULL,
+  `response_time_ms` int(11) DEFAULT NULL,
+  `ip` varchar(45) DEFAULT NULL,
+  `host_header` varchar(255) DEFAULT NULL,
+  `user_agent` varchar(512) DEFAULT NULL,
+  `referer` varchar(512) DEFAULT NULL,
+  `x_request_id` char(36) DEFAULT NULL,
+  `extra` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`extra`))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `user_logs`
+--
+
+INSERT INTO `user_logs` (`id`, `created_at`, `user_id`, `username`, `event`, `method`, `route`, `status`, `response_time_ms`, `ip`, `host_header`, `user_agent`, `referer`, `x_request_id`, `extra`) VALUES
+(217, '2025-08-12 14:12:18', NULL, NULL, 'request', 'POST', '/api/login', 200, 84, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '0dd425eb-5eab-4456-af00-255dd8a8e2fb', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(218, '2025-08-12 14:12:22', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 15, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '36fc6e22-ac87-4c7b-95d9-5824c8db5d24', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(219, '2025-08-12 14:12:25', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 7, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '55500bcd-44ab-4864-8b4c-046d25cb63e5', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(220, '2025-08-12 14:12:42', NULL, NULL, 'request', 'POST', '/api/login', 200, 62, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '78d6ac4b-260b-4c6e-a74a-39e24cfa5be5', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(221, '2025-08-12 14:12:53', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 9, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'dd510c79-c2d7-4abd-acfa-0ef02e64e3dd', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(222, '2025-08-12 14:13:40', NULL, NULL, 'request', 'GET', '/api/dashboard', 401, 1, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', NULL, '1a7072a9-ddaa-43c5-a4b2-98956f338a3c', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(223, '2025-08-12 14:13:40', NULL, NULL, 'request', 'GET', '/favicon.ico', 404, 2, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:4000/api/dashboard', '0fe92180-2882-4bd8-b1a0-bb55491c690e', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(224, '2025-08-12 14:13:46', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 7, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'c2113010-989a-43d2-a6ab-f2a53524fd1e', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(225, '2025-08-12 14:14:09', NULL, NULL, 'request', 'POST', '/api/login', 200, 99, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '47825bf9-a972-46d2-a037-f5edc1e69b7e', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(226, '2025-08-12 14:14:15', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 16, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '72f12bee-99b7-4443-b765-af0d194f318f', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(227, '2025-08-12 14:14:21', NULL, NULL, 'request', 'GET', '/api/partes/tareas', 200, 10, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '7b3752c2-82ea-4e3b-8e66-60dd705c1d47', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(228, '2025-08-12 14:14:21', NULL, NULL, 'request', 'GET', '/api/partes/tareas', 200, 19, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'dd489979-6862-488a-a78e-1a3b172c450a', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(229, '2025-08-12 14:14:21', NULL, NULL, 'request', 'GET', '/api/obras', 200, 18, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'cf48ab4a-15fe-419c-90e4-6a5544f7e5f4', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(230, '2025-08-12 14:14:21', NULL, NULL, 'request', 'GET', '/api/equipos/tipos', 200, 15, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'ec7b8496-0db1-4298-a83f-d8d0c3999015', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(231, '2025-08-12 14:14:21', NULL, NULL, 'request', 'GET', '/api/obras', 200, 21, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'e9b45715-107f-4e99-8de3-7f2750b6b0da', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(232, '2025-08-12 14:14:21', NULL, NULL, 'request', 'GET', '/api/equipos/tipos', 200, 18, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'de61329c-ff8a-4d18-8207-c3a01411c222', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(233, '2025-08-12 14:14:29', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 13, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'd78fdc1e-d8a6-49ae-960c-ae1022185b2c', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(234, '2025-08-12 14:15:20', NULL, NULL, 'request', 'POST', '/api/login', 200, 82, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'f7d39f02-a5cd-4a7c-b8a9-891940de2a2e', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(235, '2025-08-12 14:15:25', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 20, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '41c8aa96-69de-4a10-b3ce-07a9f3fdbd43', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(236, '2025-08-12 14:19:06', NULL, NULL, 'request', 'POST', '/api/login', 200, 71, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '9b5c2883-51b6-4800-a3a8-fc87666c39f1', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(237, '2025-08-12 14:19:09', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 14, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '7bb470b5-cd83-446a-9773-b21cd4f7e0f9', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(238, '2025-08-12 14:19:40', NULL, NULL, 'request', 'GET', '/api/partes/tareas', 200, 5, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'b539e8bd-c7f1-4cca-bee9-dc3e69933295', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(239, '2025-08-12 14:19:40', NULL, NULL, 'request', 'GET', '/api/obras', 200, 9, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '2a7e1a9d-e8ea-4039-85f1-0fc12009acf1', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(240, '2025-08-12 14:19:40', NULL, NULL, 'request', 'GET', '/api/equipos/tipos', 200, 11, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'e86bdf74-0116-4b5c-9f3b-45fbe62656c5', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(241, '2025-08-12 14:19:40', NULL, NULL, 'request', 'GET', '/api/equipos/tipos', 200, 4, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '841d36db-8194-4bb7-b797-9d5ba4986e10', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(242, '2025-08-12 14:19:40', NULL, NULL, 'request', 'GET', '/api/partes/tareas', 200, 11, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'ae169cff-14a1-463c-8b51-cf678cc1598b', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(243, '2025-08-12 14:19:40', NULL, NULL, 'request', 'GET', '/api/obras', 200, 9, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '0626198c-31ba-4ca8-95f6-0a2a6e71d644', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(244, '2025-08-12 14:20:06', NULL, NULL, 'request', 'GET', '/_test_log', 404, 1, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', NULL, '76b2d647-afad-4d92-980b-f5a3960db497', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(245, '2025-08-12 14:20:14', NULL, NULL, 'request', 'GET', '/_test-log', 200, NULL, '::1', NULL, NULL, NULL, NULL, NULL),
+(246, '2025-08-12 14:20:14', NULL, NULL, 'request', 'GET', '/_test-log', 200, 5, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', NULL, '4791f150-4fd2-4362-acc5-03ce3fee37bb', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(247, '2025-08-12 14:25:40', NULL, NULL, 'request', 'POST', '/api/login', 200, 69, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '4eb691ce-f91a-4df4-a43e-210fcf7bec50', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(248, '2025-08-12 14:25:49', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 23, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'f7b1ff4a-7be8-4d0f-84ef-c487c4e5916f', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(249, '2025-08-12 14:25:53', NULL, NULL, 'request', 'GET', '/api/partes/tareas', 200, 9, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'ca548e36-bf5b-4dcb-888a-9768441c3e49', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(250, '2025-08-12 14:25:53', NULL, NULL, 'request', 'GET', '/api/obras', 200, 17, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'e981de5b-2576-4b76-879f-a2175dc8d400', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(251, '2025-08-12 14:25:53', NULL, NULL, 'request', 'GET', '/api/equipos/tipos', 200, 18, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'c3e4e367-312f-4edd-8758-b0a084fecb9e', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(252, '2025-08-12 14:25:53', NULL, NULL, 'request', 'GET', '/api/obras', 200, 6, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '391332ea-54ce-40c1-b3f8-9e1cab4dae89', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(253, '2025-08-12 14:25:53', NULL, NULL, 'request', 'GET', '/api/partes/tareas', 200, 15, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '2e44fd1c-257c-44fe-baf2-e1568a6e4dbb', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(254, '2025-08-12 14:25:53', NULL, NULL, 'request', 'GET', '/api/equipos/tipos', 200, 17, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '755ebfe6-7612-4d8c-9230-ac909065c7fe', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(255, '2025-08-12 14:27:16', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 14, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'efb96abb-bab0-4eb4-8bc6-639d2e5a4bf7', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(256, '2025-08-12 14:28:21', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 8, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'efe39f7f-49e1-4b23-994d-99c97006e0d8', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(257, '2025-08-12 14:28:24', NULL, NULL, 'request', 'POST', '/api/login', 200, 61, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '85f1aa17-2134-46fb-9907-1c03b430e4c5', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(258, '2025-08-12 14:28:27', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 11, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'ffe64e1c-01d0-4d68-8a83-eeba3ab8e755', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(259, '2025-08-12 14:28:43', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 6, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'd91336f5-eeac-46ed-a0b2-5b5406085210', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(260, '2025-08-12 14:30:31', NULL, NULL, 'request', 'POST', '/api/login', 200, 53, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'e7658573-aecd-4bbc-9854-416682e534eb', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(261, '2025-08-12 14:32:49', NULL, NULL, 'request', 'POST', '/api/login', 200, 103, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'aa198caa-bd9e-41d6-b2bd-513780d11a52', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(262, '2025-08-12 14:35:16', NULL, NULL, 'request', 'POST', '/api/login', 200, 67, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'a7b88e63-224a-4cf8-90b5-d5d8116c4255', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(263, '2025-08-12 14:35:24', NULL, NULL, 'request', 'POST', '/api/login', 200, 58, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '4a607bc9-40bd-4c92-9e40-3da36de548b6', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(264, '2025-08-12 14:35:41', NULL, NULL, 'request', 'POST', '/api/login', 200, 54, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'd6e4e89d-56c7-43c7-8b7b-727cba0f9d32', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(265, '2025-08-12 14:36:01', NULL, NULL, 'request', 'POST', '/api/login', 200, 99, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '8c2115e3-e246-44ea-989d-d9be3517e6be', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(266, '2025-08-12 14:37:14', NULL, NULL, 'request', 'POST', '/api/login', 200, 56, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'd535e767-82bd-4ec2-a0ee-d65ac5a3b4d2', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(267, '2025-08-12 14:38:59', NULL, NULL, 'request', 'POST', '/api/login', 200, 95, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'aae80ad9-fe04-47e0-8caa-a415f771e5df', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(268, '2025-08-12 14:40:05', NULL, NULL, 'request', 'POST', '/api/login', 200, 72, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'd7781bca-ac83-4f0e-aefb-3004d2290cdb', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(269, '2025-08-12 14:56:49', NULL, NULL, 'request', 'POST', '/api/login', 200, 88, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '508e2595-40df-4c65-8280-1d27822db2c6', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(270, '2025-08-12 15:03:28', NULL, NULL, 'request', 'POST', '/api/login', 200, 139, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'b8797648-b2cb-476f-8c94-e3d80adb51b5', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(271, '2025-08-12 15:08:16', NULL, NULL, 'request', 'POST', '/api/login', 200, 80, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '2d369e28-7ed8-4285-a1cd-83b388ce5ffc', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(272, '2025-08-12 15:09:37', NULL, NULL, 'request', 'GET', '/api/dashboard', 200, 14, '::1', 'localhost:4000', 'PostmanRuntime/7.45.0', NULL, 'a4faf29a-4309-4dc4-b3c0-8d72f0adfcdc', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(273, '2025-08-12 15:10:07', NULL, NULL, 'request', 'GET', '/api/dashboard', 200, 6, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', NULL, '4278b9ea-ea93-4f7c-8b63-355ed0faf6f5', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(274, '2025-08-12 15:10:07', NULL, NULL, 'request', 'GET', '/favicon.ico', 404, 1, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:4000/api/dashboard', 'd88ace3c-bb35-4263-82b2-047d8cc9af72', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(275, '2025-08-12 15:10:35', NULL, NULL, 'request', 'GET', '/api/dashboard', 401, 3, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', NULL, 'db828a44-c784-455d-a087-c9b91e3513fe', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(276, '2025-08-12 15:10:40', NULL, NULL, 'request', 'POST', '/api/login', 200, 65, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '5b85007f-1090-42db-8c71-4d72e70b966e', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(277, '2025-08-12 15:10:45', NULL, NULL, 'request', 'GET', '/api/dashboard', 401, 1, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', NULL, 'e2292e11-ebc3-4808-8a53-fab5176de292', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(278, '2025-08-12 15:10:46', NULL, NULL, 'request', 'GET', '/api/dashboard', 401, 1, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', NULL, 'ea92aef4-9fc4-4f20-9e2f-b78bf636fe70', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(279, '2025-08-12 15:10:46', NULL, NULL, 'request', 'GET', '/api/dashboard', 401, 0, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', NULL, '1711d0f5-0431-4c68-8949-0c89ed3f766f', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(280, '2025-08-12 15:10:46', NULL, NULL, 'request', 'GET', '/api/dashboard', 401, 1, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', NULL, '1df8cd09-3432-4749-abd2-65bdb7254a4a', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(281, '2025-08-12 15:10:49', NULL, NULL, 'request', 'GET', '/api/dashboard', 401, 0, '::1', 'localhost:4000', 'PostmanRuntime/7.45.0', NULL, '741a2738-f02c-4385-86ed-2ea943c27c7f', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(282, '2025-08-12 15:10:54', NULL, NULL, 'request', 'GET', '/api/dashboard', 401, 1, '::1', 'localhost:4000', 'PostmanRuntime/7.45.0', NULL, '3686eb28-7e75-4c4e-bd74-a5d892fcaea9', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(283, '2025-08-12 15:11:29', NULL, NULL, 'request', 'GET', '/api/dashboard', 401, 1, '::1', 'localhost:4000', 'PostmanRuntime/7.45.0', NULL, '2db702b1-396c-4670-9f2a-9610ef40538f', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(284, '2025-08-12 15:11:55', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 6, '::1', 'localhost:4000', 'PostmanRuntime/7.45.0', NULL, '4c8c4d1d-c11c-4ea3-9284-23c748337817', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(285, '2025-08-12 15:12:10', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 51, '::1', 'localhost:4000', 'PostmanRuntime/7.45.0', NULL, '5fac7815-8e4b-4011-a999-e7b6006203e2', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(286, '2025-08-12 15:12:14', NULL, NULL, 'request', 'POST', '/api/login', 200, 73, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '8828fea6-da21-46c2-b2b5-904d52a3ec98', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(287, '2025-08-12 15:18:37', NULL, NULL, 'request', 'POST', '/api/login', 200, 78, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'd1d6ee92-e58f-4275-bbf6-79186d500128', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(288, '2025-08-12 15:25:46', NULL, NULL, 'request', 'POST', '/api/login', 200, 86, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'c23c86f2-498c-45bc-88b7-960fb0af261e', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(289, '2025-08-12 15:31:06', NULL, NULL, 'request', 'GET', '/api/dashboard', 401, 1, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', NULL, '61184a74-d4f8-44b3-bab3-a9ecff0908e1', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(290, '2025-08-12 15:31:13', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 25, '::1', 'localhost:4000', 'PostmanRuntime/7.45.0', NULL, '5ed3e902-213a-49df-ba05-9a27f3ea25e2', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(291, '2025-08-12 15:32:22', NULL, NULL, 'request', 'POST', '/api/login', 200, 68, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'a59ec8fc-8792-4705-8717-7c36a18aa223', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(292, '2025-08-12 15:38:10', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 15, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'a36c1e94-73d1-4868-be47-8a41a1d96221', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(293, '2025-08-12 15:38:14', NULL, NULL, 'request', 'POST', '/api/login', 200, 59, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'b52e153d-da42-48a5-871b-beacf2c8907f', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(294, '2025-08-12 15:38:14', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 7, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'ca5da680-ce81-47a7-b62d-3fa175eba6fd', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(295, '2025-08-12 15:39:16', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 6, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '4ddf9d9e-4c19-4255-b09d-b42977381974', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(296, '2025-08-13 08:43:04', NULL, NULL, 'request', 'POST', '/api/login', 200, 97, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '8ffa6af9-afda-4ad5-8ade-05ec795d3e0e', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(297, '2025-08-13 08:43:04', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 26, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '83c43617-ecf0-4a1a-ac02-ce97bab9266f', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(298, '2025-08-13 08:43:33', NULL, NULL, 'request', 'POST', '/api/login', 200, 71, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '2b3f3909-2973-4139-b5c9-0f6a7bfb78d6', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(299, '2025-08-13 08:43:33', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 11, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '2a2109cd-5b37-4c41-a18e-cb6064595724', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(300, '2025-08-13 08:43:42', NULL, NULL, 'request', 'POST', '/api/login', 200, 69, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '4e61e3c2-39a3-4253-aa9c-5c00a0cb1e41', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(301, '2025-08-13 08:43:42', NULL, NULL, 'request', 'GET', '/api/partes/tareas', 200, 7, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '5f969923-2801-4f23-a2a6-2f3555a230f1', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(302, '2025-08-13 08:43:42', NULL, NULL, 'request', 'GET', '/api/obras', 200, 14, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'a4994329-5f4d-40dc-8392-6857fd661b6b', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(303, '2025-08-13 08:43:42', NULL, NULL, 'request', 'GET', '/api/equipos/tipos', 200, 15, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '57d858c4-e35a-418a-8b1c-b37311418c33', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(304, '2025-08-13 08:43:42', NULL, NULL, 'request', 'GET', '/api/obras', 200, 4, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '6dd4f0dc-aa77-4268-ac5b-9cf59d4340af', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(305, '2025-08-13 08:43:42', NULL, NULL, 'request', 'GET', '/api/partes/tareas', 200, 16, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '71092045-de7c-478f-8ee1-49f986fa44a0', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(306, '2025-08-13 08:43:42', NULL, NULL, 'request', 'GET', '/api/equipos/tipos', 200, 8, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '07fadf8f-2098-492d-b6cc-9fb1174d83c8', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(307, '2025-08-13 09:11:42', NULL, NULL, 'request', 'POST', '/api/login', 200, 149, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '208d8869-4074-4dc8-b6ee-4934c0a5dadc', '{\"queryKeys\":[],\"bodyKeys\":[\"username\"]}'),
+(308, '2025-08-13 09:11:42', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 21, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '1a3e7f2f-bc65-4b03-ab8f-313cee72e303', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(309, '2025-08-13 09:11:48', NULL, NULL, 'request', 'GET', '/api/equipos', 200, 9, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '0ba6459e-65f0-47a9-89d4-f9d1f14d97db', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(310, '2025-08-13 09:11:48', NULL, NULL, 'request', 'GET', '/api/equipos/tipos', 200, 9, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'f853db3f-c6bd-4521-86aa-1d5755b35394', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(311, '2025-08-13 09:11:48', NULL, NULL, 'request', 'GET', '/api/equipos/tipos', 200, 10, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '98a12769-fcc9-44b0-aacf-4efed3fb950a', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(312, '2025-08-13 09:11:48', NULL, NULL, 'request', 'GET', '/api/equipos', 200, 16, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'b230e8b1-f10b-425e-a7f8-d8c3b6f9463d', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(313, '2025-08-13 09:26:43', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 16, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '8e37a5ba-a97a-409d-a287-b88e1f26f8d1', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(314, '2025-08-13 09:26:45', NULL, NULL, 'request', 'GET', '/api/partes/tareas', 200, 5, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'fffedcd8-20c0-4488-a78d-5fa4e6e4eb96', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(315, '2025-08-13 09:26:45', NULL, NULL, 'request', 'GET', '/api/equipos/tipos', 200, 6, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'f0b0a36e-48fc-4dbb-baa5-9028cb6d366a', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(316, '2025-08-13 09:26:45', NULL, NULL, 'request', 'GET', '/api/obras', 200, 10, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '1d235e01-01e7-41d5-bfe2-f3311b4f6cb1', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(317, '2025-08-13 09:26:45', NULL, NULL, 'request', 'GET', '/api/partes/tareas', 200, 11, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '7312b341-6b95-4bdb-973d-a36cfe256d2f', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(318, '2025-08-13 09:26:45', NULL, NULL, 'request', 'GET', '/api/obras', 200, 6, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '812610e3-a3e9-4ca5-96dc-381b33fc2ee8', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(319, '2025-08-13 09:26:45', NULL, NULL, 'request', 'GET', '/api/equipos/tipos', 200, 13, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '30818fa1-4cbb-4e16-a106-b4953f71117e', '{\"queryKeys\":[],\"bodyKeys\":[]}'),
+(320, '2025-08-13 09:26:51', NULL, NULL, 'request', 'GET', '/api/equipos?tipo=CAMIONETA', 200, 6, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'da1bbe18-8e12-47f6-ab18-b56ce0065b74', '{\"queryKeys\":[\"tipo\"],\"bodyKeys\":[]}'),
+(321, '2025-08-13 09:41:10', NULL, NULL, 'request', 'POST', '/api/partes', 201, 12, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', 'be280731-6072-4821-8669-e0ae14e4c5ea', '{\"queryKeys\":[],\"bodyKeys\":[\"usuario_id\",\"obra_id\",\"equipo_id\",\"horometro_inicio\",\"observaciones\",\"fecha\"]}'),
+(322, '2025-08-13 09:41:10', NULL, NULL, 'request', 'POST', '/api/partes/85/detalle', 201, 32, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '3f86b426-c9fb-47ae-b387-649f714cadbd', '{\"queryKeys\":[],\"bodyKeys\":[\"hora\",\"horometro_km\",\"tarea_id\"]}'),
+(323, '2025-08-13 09:41:14', NULL, NULL, 'request', 'POST', '/api/ubicaciones', 201, 8, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '41defd1d-23d7-490d-aab0-88bfc3d8ce0b', '{\"queryKeys\":[],\"bodyKeys\":[\"entity\",\"entity_id\",\"usuario_id\",\"lat\",\"lng\",\"precision_m\",\"fuente\"]}'),
+(324, '2025-08-13 09:41:31', 1, 'admin', 'request', 'GET', '/api/dashboard', 200, 39, '::1', 'localhost:4000', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'http://localhost:3000/', '0574a63a-97b4-4970-b251-4a8143c9bfd5', '{\"queryKeys\":[],\"bodyKeys\":[]}');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL,
+  `full_name` varchar(255) DEFAULT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `role` enum('admin','user') DEFAULT 'user',
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `permisos` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`permisos`))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `full_name`, `username`, `password`, `email`, `role`, `created_at`, `permisos`) VALUES
+(1, 'Ivan Bravo', 'admin', '$2b$10$cOWgUygVCkf.Wvp9s7G3NO.XvxjmMAtS1JHkazbV1nEOjt.u8v3WK', 'soporte01@vadiegsa.com', 'admin', '2025-07-21 16:27:10', '\"admin\"'),
+(7, 'taller', 'taller', '$2a$10$SR8Bq2UDE.kPRS19Y0yLhe3QCEMaEJ3gTrUI6UdrjBS8ezcQcWSQ2', 'taller@example.es', 'user', '2025-08-03 01:27:16', '\"orden-servicio\"'),
+(9, 'Maquinista1', 'maq1', '$2b$10$/s9LwJYCDaRUVM9bcPvNeeB3vOXD.bF.kFlf2makyYEWj/ivXSnra', 'maq1@example.com', 'user', '2025-08-06 15:23:38', '\"maquinista\"'),
+(10, 'Maquinista2', 'maq2', '$2b$10$R.9ppkuEoN.aRnrpP.MSWeYpxrd9dErzfGZwHG8PkYbUtjMha3CWm', 'maq2@example.com', 'user', '2025-08-06 15:35:05', '\"maquinista\"'),
+(11, 'taller02', 'taller02', '$2b$10$Z31h.9jfgDtw250zPHQwuuzHbSyUP9pInsas0QF8RxY7aQ1OvwcBG', 'taller02@example.es', 'user', '2025-08-06 22:54:09', '\"orden-servicio\"'),
+(12, 'Taller 03', 'taller03', '$2b$10$X9FDJP7AU0smBWVok6pAj.gZVeto0QB1dyGniPDhNhzvPMJsRtX1i', 'taller03@example.com', 'user', '2025-08-06 22:55:42', '\"orden-servicio\"');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `detalle_partes_diarios`
+--
+ALTER TABLE `detalle_partes_diarios`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `parte_id` (`parte_id`),
+  ADD KEY `tarea_id` (`tarea_id`);
+
+--
+-- Indices de la tabla `equipos`
+--
+ALTER TABLE `equipos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `obras`
+--
+ALTER TABLE `obras`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `cod_obra` (`cod_obra`);
+
+--
+-- Indices de la tabla `ordenes_servicio`
+--
+ALTER TABLE `ordenes_servicio`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `obra_id` (`obra_id`),
+  ADD KEY `equipo_id` (`equipo_id`),
+  ADD KEY `usuario_id` (`usuario_id`);
+
+--
+-- Indices de la tabla `partes_diarios`
+--
+ALTER TABLE `partes_diarios`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `usuario_id` (`usuario_id`),
+  ADD KEY `obra_id` (`obra_id`),
+  ADD KEY `equipo_id` (`equipo_id`);
+
+--
+-- Indices de la tabla `repuestos_orden`
+--
+ALTER TABLE `repuestos_orden`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `orden_id` (`orden_id`);
+
+--
+-- Indices de la tabla `tareas`
+--
+ALTER TABLE `tareas`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `nombre` (`nombre`);
+
+--
+-- Indices de la tabla `ubicaciones`
+--
+ALTER TABLE `ubicaciones`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idx_entity` (`entity`,`entity_id`),
+  ADD KEY `idx_usuario` (`usuario_id`);
+
+--
+-- Indices de la tabla `user_logs`
+--
+ALTER TABLE `user_logs`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idx_user_logs_created_at` (`created_at`),
+  ADD KEY `idx_user_logs_user` (`user_id`),
+  ADD KEY `idx_user_logs_event` (`event`),
+  ADD KEY `idx_user_logs_route` (`route`);
+
+--
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `detalle_partes_diarios`
+--
+ALTER TABLE `detalle_partes_diarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=327;
+
+--
+-- AUTO_INCREMENT de la tabla `equipos`
+--
+ALTER TABLE `equipos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=307;
+
+--
+-- AUTO_INCREMENT de la tabla `obras`
+--
+ALTER TABLE `obras`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+
+--
+-- AUTO_INCREMENT de la tabla `ordenes_servicio`
+--
+ALTER TABLE `ordenes_servicio`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+
+--
+-- AUTO_INCREMENT de la tabla `partes_diarios`
+--
+ALTER TABLE `partes_diarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
+
+--
+-- AUTO_INCREMENT de la tabla `repuestos_orden`
+--
+ALTER TABLE `repuestos_orden`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT de la tabla `tareas`
+--
+ALTER TABLE `tareas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT de la tabla `ubicaciones`
+--
+ALTER TABLE `ubicaciones`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT de la tabla `user_logs`
+--
+ALTER TABLE `user_logs`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=325;
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `detalle_partes_diarios`
+--
+ALTER TABLE `detalle_partes_diarios`
+  ADD CONSTRAINT `detalle_partes_diarios_ibfk_1` FOREIGN KEY (`parte_id`) REFERENCES `partes_diarios` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `detalle_partes_diarios_ibfk_2` FOREIGN KEY (`tarea_id`) REFERENCES `tareas` (`id`);
+
+--
+-- Filtros para la tabla `partes_diarios`
+--
+ALTER TABLE `partes_diarios`
+  ADD CONSTRAINT `partes_diarios_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`),
+  ADD CONSTRAINT `partes_diarios_ibfk_2` FOREIGN KEY (`obra_id`) REFERENCES `obras` (`id`),
+  ADD CONSTRAINT `partes_diarios_ibfk_3` FOREIGN KEY (`equipo_id`) REFERENCES `equipos` (`id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
